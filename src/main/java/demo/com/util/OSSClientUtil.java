@@ -96,7 +96,6 @@ public class OSSClientUtil {
 		// 创建OSSClient实例
 		OSSClient ossClient = null;
 		try {
-			logger.info(OSSConfig.ENDPOINT+"=="+ OSSConfig.ACCESS_KEY_ID +"=="+OSSConfig.ACCESS_KEY_SECRET);
 			ossClient = new OSSClient(OSSConfig.ENDPOINT, OSSConfig.ACCESS_KEY_ID, OSSConfig.ACCESS_KEY_SECRET);
 			logger.info("开始上传");
 			ossClient.putObject(bucketName, key, fileIS, new ObjectMetadata());
